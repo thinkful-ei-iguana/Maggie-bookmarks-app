@@ -1,4 +1,5 @@
 // import $ from 'jquery';
+import api from './api.js';
 
 const items = [];
 
@@ -8,19 +9,74 @@ let filter = 0;
 let expand = false;
 
 
+const loadBookmarks = function() {
+  return api.getBookmarks().then(
+    (/* resolve */allBookmarks)=>{
+      console.log('we got here', allBookmarks);
+      items.push.apply(items, allBookmarks);
+      console.log('this is items', items);
+      return items;
+    },
+    (/* reject */err)=>{
+      console.error(err);
+    });
+};
+
+const deleteBookmark = function(id) {
+  return api.deleteBookmark(id).then(
+    (/* resolve */)=>{
+      
+      console.log('deleteBookmark 1 of 2');
+
+      items.filter(items, );
+      
+      console.log('deleteBookmark 2 of 2');
+      
+      return items;
+    },
+    (/* reject */err)=>{
+      console.error(err);
+    });
+};
+
 // on submit of Add New button, toggle adding value
 const toggleAdd = function() {
-  let adding = !adding;
-}
+  adding = !adding;
+};
 
 // on click of condensed bookmark, toggle expand value
 const toggleExpand = function() {
-  let expand = !expand;
-}
+  expand = !expand;
+  console.log(expand);
+};
+
+// .on('change') for select element, filter bookmarks
+const setChosenRating = function(value) {
+  filter = value;
+};
+
+const toggleStars = function(e) {
+
+  // value of the star that is selected
+  let starValueClicked = parseInt(e.currentTarget.getAttribute('data-value'));
+  
+  for(let i = 0; i < 5; i++) {
+    
+    // gives array of all star elements
+    let star = $('#star-rating').getElementsByClassName('fa-star');
+    console.log('star is', star);
+    //turns typeof data-value of a star into a number
+    let starNumValue = parseInt(star.getAttribute('data-value'));
+    if(starValueClicked >= starNumValue){
+      star.addClass('checked');
+    }
+    
+  }
+    
+};
 
 
-
-export const store = {
+const store = {
   bookmarks: [
     { 
       id: '7ddr',
@@ -45,7 +101,10 @@ export const store = {
 };
 
 export default {
-  store,
   toggleAdd,
-  toggleExpand
+  toggleExpand,
+  setChosenRating,
+  toggleStars,
+  loadBookmarks,
+  deleteBookmark
 };

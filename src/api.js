@@ -3,6 +3,7 @@ const BASE_URL = 'https://thinkful-list-api.herokuapp.com/maggie';
 
 const listApiFetch = function(...args) {
   let error;
+  
   return fetch(...args)
     // first .then
     .then(res => {
@@ -28,17 +29,16 @@ const listApiFetch = function(...args) {
 
 function getBookmarks() {
   return listApiFetch(`${BASE_URL}/items`);
-
 }
 
 function createNewBookmark(name) {
   const newItem = JSON.stringify({name});
-  return listApiFetch(`${BASE_URL}/items` {
+  return listApiFetch(`${BASE_URL}/items`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: newItem
   });
-};
+}
 
 function updateBookmark(id, updateData) {
   const newData = JSON.stringify(updateData);
@@ -49,18 +49,18 @@ function updateBookmark(id, updateData) {
   });
 }
 
-function deleteBookmark() {
+function deleteBookmark(id) {
   // shopping list example: return listApiFetch(BASE_URL + '/items/' + id
-  return listApiFetch(`${BASE_URL}/items/${id}` {
+  return listApiFetch(`${BASE_URL}/items/${id}`, {
     method: 'DELETE'
   });
 }
 
-return {
+export default {
   getBookmarks,
   createNewBookmark,
   updateBookmark,
   deleteBookmark
-}
+};
 
 

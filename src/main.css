@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     background-color: whitesmoke;
 }
@@ -20,7 +21,7 @@ main {
 }
 
 li {
-    text-decoration-style: none;
+    list-style-type: none;
 }
 
 h1 {
@@ -43,6 +44,10 @@ header ul {
     padding: 10px; 
 }
 
+.control-selections {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 /* add new bookmark view below */
 
@@ -119,4 +124,14 @@ h2 {
 
 #main-item-display {
     border: 2px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    padding: 8px;
+}
+
+#deletebut {
+    margin-left: 300px;
 }
