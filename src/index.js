@@ -1,7 +1,3 @@
-
-import store from './store.js';
-import api from './api.js';
-import bookmarks from './bookmarks-main.js';
 import displays from './displays.js';
 
 
@@ -14,45 +10,12 @@ import displays from './displays.js';
 *
 */
 
-// bookmarks.render;
-// bookmarks.allEventListeners;
-
-// console.log(bookmarks.render, bookmarks.allEventListeners);
-
-// to expand: store.bookmarks[i].expanded (true/false)
-// to add: store.adding (true/false)
-// to filter: store.filter (number)
 
 
-// const main = function(){
-//   api.getBookmarks()
-//     .then(bookmarks => {
-//       console.log(bookmarks);
-//     });
-//   handleFeatures.bindEventListeners();
-// };
+const main = function(){
+  displays.renderAddView();
+  displays.listBookmarks();
+};
 
-// $(main);
+$(main);
 
-
-
-
-// const expandBookmark = function() {
-//   $('.control-selections').on('click', (e) => {
-//     e.preventDefault();
-//     $('li').removeClass('hidden')
-//   })
-// };
-
-// displays.renderAddView();
-// displays.newBookmarkItem();
-
-displays.listBookmarks();
-displays.deleteBookmark();
-// api.createNewBookmark('Great Site');
-
-
-
-// bookmarks.render();
-// store.toggleStars();
-// renderBookmarksCondensed();

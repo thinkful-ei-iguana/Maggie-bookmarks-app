@@ -1,19 +1,25 @@
 * {
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 main {
-    border: 2px solid black;
+    
     height: 500px;
     width: 450px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+}
+
+hr {
+    border: 5px medium black;
+    width: 70%;
 }
 
 .hidden {
@@ -25,44 +31,59 @@ li {
 }
 
 h1 {
-    color: teal;
+    color: orangered;
+    font-size: 70px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-header ul {
+/* header ul {
     display: flex;
     justify-content: space-around;
+} */
+
+h2 {
+    font-size: 36px;
 }
 
 #addbut {
     margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+select {
+    border: 2px solid black;
 }
 
 .selections li {
     display: inline-block;
-    padding: 10px; 
+    /* padding: 20px;  */
 }
 
 .control-selections {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 90px;
 }
 
 /* add new bookmark view below */
 
 h2 {
-    color: lightseagreen;
+    color: orangered;
     text-align: center;
 }
 
 #add-display {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     margin: 10px;
 }
 
-#add-display input, textarea {
+#add-display input {
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 #add-url-field {
@@ -79,12 +100,12 @@ h2 {
     padding: 8px
 }
 
-#star-rating {
+.star-rating {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
 
-#star-rating > span {
+.star-rating > span {
     display: inline-block;
     position: relative;
     width: 1.1em;
@@ -92,8 +113,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-#star-rating > span:hover:before,
-#star-rating > span:hover ~ span:before {
+.star-rating > span:hover:before,
+.star-rating > span:hover ~ span:before {
     color: goldenrod;
 }
 
@@ -115,15 +136,18 @@ h2 {
 }
 
 #submit-add, #cancel-add {
-    border: 4px solid lightseagreen;
+    
+    border: 4px solid black;
     font-size: larger;
     padding: 7px;
 }
 
+
 /* render after add display */
 
-#main-item-display {
+#individual-bookmark {
     border: 2px solid black;
+    border-radius: 5px;
     display: inline-block;
     margin-left: 20px;
     width: 400px;
@@ -134,4 +158,24 @@ h2 {
 
 #deletebut {
     margin-left: 300px;
+    border: 2px dotted black;
+    border-radius: 5px;
+}
+
+#add-display {
+    position: relative;
+}
+
+#item-display {
+    position: absolute;
+}
+
+.expandbut {
+    border: 2px dotted black;
+    border-radius: 5px;
+}
+
+#visitbut {
+    border: 2px dotted black;
+    border-radius: 5px;
 }

@@ -28,12 +28,12 @@ const listApiFetch = function(...args) {
 };
 
 function getBookmarks() {
-  return listApiFetch(`${BASE_URL}/items`);
+  return listApiFetch(`${BASE_URL}/bookmarks`);
 }
 
-function createNewBookmark(name) {
-  const newItem = JSON.stringify({name});
-  return listApiFetch(`${BASE_URL}/items`, {
+function createNewBookmark(bookmark) {
+  const newItem = JSON.stringify(bookmark);
+  return listApiFetch(`${BASE_URL}/bookmarks`, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: newItem
@@ -42,7 +42,7 @@ function createNewBookmark(name) {
 
 function updateBookmark(id, updateData) {
   const newData = JSON.stringify(updateData);
-  return listApiFetch(`${BASE_URL}/items/${id}`, {
+  return listApiFetch(`${BASE_URL}/bookmarks/${id}`, {
     method: 'PATCH',
     headers: {'Content-Type': 'application/json'},
     body: newData
@@ -51,7 +51,7 @@ function updateBookmark(id, updateData) {
 
 function deleteBookmark(id) {
   // shopping list example: return listApiFetch(BASE_URL + '/items/' + id
-  return listApiFetch(`${BASE_URL}/items/${id}`, {
+  return listApiFetch(`${BASE_URL}/bookmarks/${id}`, {
     method: 'DELETE'
   });
 }
