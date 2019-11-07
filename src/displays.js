@@ -13,7 +13,7 @@ const addDisplayHtml =
     <label for="add-name"></label>
     <input type="text" name="name-input" id="add-name" placeholder="My new favorite site!">
     
-    <div id="star-rating-${newBookmarkId}" class="star-rating">
+    <div id="star-rating-${newBookmarkId}" class="star-rating hovers">
         <span class="fa fa-star" data-value="5"></span>
         <span class="fa fa-star" data-value="4"></span>
         <span class="fa fa-star" data-value="3"></span>
@@ -82,15 +82,15 @@ const listBookmarks = function() {
           <form id="expand-button-${id}">
               <button type="submit" id="expandbut-${id}" class="expandbut">EXPAND</button>
           </form>
-          <li class="bm-detail">${bmTitle}</li>
-          <li class="bm-detail">
+          <li class="bm-detail col">${bmTitle}</li>
+          <li class="bm-detail col">
             <div id="star-rating-${id}" class="star-rating">
               ${starSpans}
             </div>
           </li>
           <div id="details-to-hide">
-            <li class="bm-detail-${id} hidden">${description}</li>
-            <li class="bm-detail-${id} hidden">
+            <li class="bm-detail-${id} col hidden">${description}</li>
+            <li class="bm-detail-${id} col hidden">
               <form id="url-button" action="${url}">
                 <button type="submit" id="visitbut">VISIT LINK</button>
               </form>

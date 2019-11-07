@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 body {
@@ -37,11 +37,6 @@ h1 {
     margin-top: 50px;
 }
 
-/* header ul {
-    display: flex;
-    justify-content: space-around;
-} */
-
 h2 {
     font-size: 36px;
 }
@@ -54,17 +49,12 @@ h2 {
 
 select {
     border: 2px solid black;
+    padding: 3px;
 }
 
-.selections li {
-    display: inline-block;
-    /* padding: 20px;  */
-}
-
-.control-selections {
+.selections {
     display: flex;
-    justify-content: space-evenly;
-    margin-right: 90px;
+    justify-content: center;
 }
 
 /* add new bookmark view below */
@@ -113,8 +103,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-.star-rating > span:hover:before,
-.star-rating > span:hover ~ span:before {
+.hovers > span:hover:before,
+.hovers > span:hover ~ span:before {
     color: goldenrod;
 }
 
@@ -145,29 +135,33 @@ h2 {
 
 /* render after add display */
 
+
 #individual-bookmark {
     border: 2px solid black;
     border-radius: 5px;
     display: inline-block;
     margin-left: 20px;
-    width: 400px;
+    width: 300px;
     margin-top: 10px;
     margin-bottom: 7px;
     padding: 8px;
 }
 
+#details-to-hide form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 #deletebut {
-    margin-left: 300px;
+    /* margin-left: 300px; */
     border: 2px dotted black;
     border-radius: 5px;
+    margin-top: 3px;
 }
 
 #add-display {
     position: relative;
-}
-
-#item-display {
-    position: absolute;
 }
 
 .expandbut {
@@ -178,4 +172,18 @@ h2 {
 #visitbut {
     border: 2px dotted black;
     border-radius: 5px;
+}
+
+/* media queries */
+@media (min-width: 320px) {
+
+    .selections li {
+        display: inline-block;
+        /* padding: 20px;  */
+    }
+
+    .control-selections {
+        margin-right: 90px;
+    }
+
 }
