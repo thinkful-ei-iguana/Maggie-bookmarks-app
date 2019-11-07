@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="wireframe.css">
+    <title>My Bookmarks App</title>
+</head>
+<body>
+    <header role="banner" class="row">
+        <h1>Bookmark Buddy</h1>
+        <div class="control-selections">
+            <ul class="selections hidden-nav">
+                <li>
+                    <form id="add-bookmark">
+                        <label for="add">Add new bookmark</label>
+                        <br>
+                        <button type="submit" id="addbut">ADD NEW BOOKMARK</button>
+                    </form>
+                </li>
+                <li>
+                    <label id="filter-label">Filter by rating
+                        <br>
+                        <select>
+                            <option name="stars" value="default">Filter by rating</option>
+                            <option name="stars" value="five-stars">Five stars</option>
+                            <option name="stars" value="four-stars">Four stars+</option>
+                            <option name="stars" value="three-stars">Three stars+</option>
+                            <option name="stars" value="two-stars">Two stars+</option>
+                            <option name="stars" value="one-star">One star+</option>
+                        </select>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main role="main" id="main-display">        
+        <section class='row error-message-container'>
+            <span id='js-error-message'>
+            </span>
+        </section>
+
+        <section id="add-display">
+            <h2>Add a Bookmark Below</h2>
+            <form id="add-display">   
+                <label for="add-url-field"></label>
+                <br>
+                <input type="text" name="url-input" id="add-url-field" value="http://">
+                <br>
+                <label for="add-name"></label>
+                <input type="text" name="name-input" id="add-name" placeholder="My new favorite site!">
+                
+                <div id="star-rating">
+                    <span class="fa fa-star" data-value="5"></span>
+                    <span class="fa fa-star" data-value="4"></span>
+                    <span class="fa fa-star" data-value="3"></span>
+                    <span class="fa fa-star" data-value="2"></span>
+                    <span class="fa fa-star" data-value="1"></span>
+                </div>
+                <label for="add-description"></label>
+                <input type="text" name="description-input" id="add-description" placeholder="Optional - leave a description of your new bookmark">
+                <div class="add-view-buttons">
+                    <div class="err">Please enter a URL</div>
+                    <button type="submit" id="submit-add">Add</button>
+                    <button type="submit" id="cancel-add">Go Back</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="item-display">
+            <ul id="list">
+                
+            </ul>
+            <!-- ul and li go here but from js file -->
+        </section>
+    </main>
+    <script>
+        const store = {
+            bookmarks: [...],
+            adding: true,
+            error: true,
+            filter: 0
+        };
+    </script>>
+</body>
+</html>

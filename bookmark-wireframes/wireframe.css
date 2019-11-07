@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    border: 2px solid black;
+    height: 500px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+li {
+    text-decoration-style: none;
+}
+
+h1 {
+    color: teal;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#addbut {
+    margin-left: 50px;
+}
+
+.selections li {
+    display: inline-block;
+    padding: 10px; 
+}
+
+.control-selections {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* add new bookmark view below */
+
+h2 {
+    color: lightseagreen;
+    text-align: center;
+}
+
+.err {
+    border: 3px dashed salmon;
+}
+
+#add-display {
+    padding: 10px;
+    margin: 10px;
+}
+
+#add-display input{
+    border: 2px solid black;
+}
+
+#add-url-field{
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    padding: 8px;
+}
+
+#add-name {
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    padding: 8px
+}
+
+#star-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+#star-rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#star-rating > span:hover:before,
+#star-rating > span:hover ~ span:before {
+    color: goldenrod;
+}
+
+.checked {
+    color: goldenrod;
+}
+
+#add-description {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    padding: 8px;
+}
+
+.add-view-buttons {
+    margin-top: 100px;
+    display: inline-block;
+    margin-left: 130px;
+}
+
+#submit-add, #cancel-add {
+    border: 4px solid lightseagreen;
+    font-size: larger;
+    padding: 7px;
+}
+
+/* render after add display */
+
+#main-item-display {
+    border: 2px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    padding: 8px;
+}
+
+#deletebut {
+    margin-left: 300px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="wireframe.css">
+    <title>My Bookmarks App</title>
+</head>
+<body>
+    <header role="banner" class="row">
+        <h1>Bookmark Buddy</h1>
+        <div class="control-selections">
+            <ul class="selections hidden-nav">
+                <li>
+                    <form id="add-bookmark">
+                        <label for="add">Add new bookmark</label>
+                        <br>
+                        <button type="submit" id="addbut">ADD NEW BOOKMARK</button>
+                    </form>
+                </li>
+                <li>
+                    <label id="filter-label">Filter by rating
+                        <br>
+                        <select>
+                            <option name="stars" value="default">Filter by rating</option>
+                            <option name="stars" value="five-stars">Five stars</option>
+                            <option name="stars" value="four-stars">Four stars+</option>
+                            <option name="stars" value="three-stars">Three stars+</option>
+                            <option name="stars" value="two-stars">Two stars+</option>
+                            <option name="stars" value="one-star">One star+</option>
+                        </select>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main role="main" id="main-display">        
+        <section class='row error-message-container'>
+            <span id='js-error-message'>
+            </span>
+        </section>
+
+        <section id="item-display">
+            <ul id="list">
+                
+            </ul>
+            <!-- ul and li go here but from js file -->
+        </section>
+    </main>
+    <script>
+        const store = {
+            bookmarks: [
+            {
+                id: 'x56w',
+                title: 'Title 1',
+                rating: 3,
+                url: 'http://www.title1.com',
+                description: 'lorem ipsum dolor sit',
+                expanded: false
+            },
+            {
+                id: '6ffw',
+                title: 'Title 2',
+                rating: 5,
+                url: 'http://www.title2.com',
+                description: 'dolorum tempore deserunt',
+                expanded: false
+            } 
+                ...
+        ],
+        adding: false,
+        error: null,
+        filter: 0
+    };
+    </script>
+</body>
+</html>
