@@ -1,5 +1,8 @@
 This app allows a user to create and delete bookmarks. Once saved, bookmarks can be viewed in a collapsed or expanded view. Bookmarks can also be filtered by rating.
 
+live page: https://thinkful-ei-iguana.github.io/Maggie-bookmarks-app/src/index
+
+
 ## User Stories
 
 As a user:
