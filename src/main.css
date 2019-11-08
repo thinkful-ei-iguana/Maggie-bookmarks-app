@@ -9,12 +9,10 @@ body {
 }
 
 main {
-    
+    margin: 0 auto;
+    width: 50%;
     height: 500px;
     width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
 }
 
 hr {
@@ -64,16 +62,10 @@ h2 {
     text-align: center;
 }
 
-#add-display {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-}
-
 #add-display input {
     border: 2px solid black;
     border-radius: 5px;
+    max-width: 380px;
 }
 
 #add-url-field {
@@ -93,6 +85,7 @@ h2 {
 .star-rating {
     unicode-bidi: bidi-override;
     direction: rtl;
+    margin-right: 70px;
 }
 
 .star-rating > span {
@@ -120,27 +113,28 @@ h2 {
 }
 
 .add-view-buttons {
-    margin-top: 100px;
-    display: inline-block;
-    margin-left: 130px;
+    display: inline;
 }
 
 #submit-add, #cancel-add {
-    
+    display: inline;
     border: 4px solid black;
     font-size: larger;
     padding: 7px;
+    margin-left: 175px;
 }
-
 
 /* render after add display */
 
+#item-display {
+    margin: 0 auto;
+    width: 65%;
+    margin-top: 20px;
+}
 
 #individual-bookmark {
     border: 2px solid black;
     border-radius: 5px;
-    display: inline-block;
-    margin-left: 20px;
     width: 300px;
     margin-top: 10px;
     margin-bottom: 7px;
@@ -154,14 +148,9 @@ h2 {
 }
 
 #deletebut {
-    /* margin-left: 300px; */
     border: 2px dotted black;
     border-radius: 5px;
     margin-top: 3px;
-}
-
-#add-display {
-    position: relative;
 }
 
 .expandbut {
@@ -179,7 +168,6 @@ h2 {
 
     .selections li {
         display: inline-block;
-        /* padding: 20px;  */
     }
 
     .control-selections {

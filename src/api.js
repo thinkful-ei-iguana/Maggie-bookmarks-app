@@ -5,7 +5,7 @@ const listApiFetch = function(...args) {
   let error;
   
   return fetch(...args)
-    // first .then
+
     .then(res => {
       if(!res.ok) {
         error = {code: res.status};
@@ -17,7 +17,7 @@ const listApiFetch = function(...args) {
       }
       return res.json();
     })
-    // second .then
+
     .then(data => {
       if (error) {
         error.message = data.message;
@@ -50,7 +50,6 @@ function updateBookmark(id, updateData) {
 }
 
 function deleteBookmark(id) {
-  // shopping list example: return listApiFetch(BASE_URL + '/items/' + id
   return listApiFetch(`${BASE_URL}/bookmarks/${id}`, {
     method: 'DELETE'
   });
