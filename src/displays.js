@@ -8,10 +8,10 @@ const addDisplayHtml =
   <form id="submit-new">   
     <label for="add-url-field"></label>
     <br>
-    <input type="text" name="url-input" id="add-url-field" value="http://">
+    <input type="text" name="url-input" id="add-url-field" required placeholder="http://">
     <br>
     <label for="add-name"></label>
-    <input type="text" name="name-input" id="add-name" placeholder="My new favorite site!">
+    <input type="text" name="name-input" id="add-name" required placeholder="My new favorite site!">
     
     <div id="star-rating-${newBookmarkId}" class="star-rating hovers">
         <span class="fa fa-star" data-value="5"></span>
@@ -21,7 +21,7 @@ const addDisplayHtml =
         <span class="fa fa-star" data-value="1"></span>
     </div>
     <label for="add-description"></label>
-    <input type="text" name="description-input" id="add-description" placeholder="Optional - jot down a description">
+    <input type="text" name="description-input" id="add-description" required placeholder="Optional - jot down a description">
     <div class="add-view-buttons">
       <form id="submit-bookmark">
         <button type="submit" id="submit-add">Add</button> 

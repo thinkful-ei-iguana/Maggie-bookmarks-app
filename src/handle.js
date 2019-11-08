@@ -6,6 +6,7 @@ import form from "./form.js";
 
 const handleSubmitNewBookmark = function() {
   console.log('handleSubmitNewBookmark working');
+  
   $('#submit-new').on('submit', e => {
     e.preventDefault();
     console.log('e is', e);
@@ -18,11 +19,12 @@ const handleSubmitNewBookmark = function() {
       desc: obj['description-input'],
       rating: store.lastAddedBookmarkRating.rating
     };
-    console.log('bookmark is', bookmark);
+    $("#submit-new").validate({
+      debug: true
+    });
+    console.log(ErrorEvent.message);
     store.createBookmark(bookmark);
-    
-  });
-  
+  }); 
 };
 
 const handleGoBack = function() {
