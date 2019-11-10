@@ -88,6 +88,11 @@ const filterByRating = function() {
     e.preventDefault();
     let filterSelection = parseInt($('#rating-options').val());
     
+    /* 
+      allows user to make multiple filter selections by removing
+      display:none settings each time a rating filter selection
+      is made 
+    */
     $('*#individual-bookmark').each(function(index, element) { 
       element.style.display='block';
     });
