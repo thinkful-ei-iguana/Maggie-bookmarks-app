@@ -87,6 +87,10 @@ const filterByRating = function() {
   $('#rating-options').on('change', e => {
     e.preventDefault();
     let filterSelection = parseInt($('#rating-options').val());
+    
+    $('*#individual-bookmark').each(function(index, element) { 
+      element.style.display='block';
+    });
 
     for(let i = 0; i < items.length; i++) {
       let ratingNumber = parseInt(items[i].rating);
